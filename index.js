@@ -1,8 +1,12 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-inquirer.prompt([{
-    name: 'title',
+inquirer.prompt([
+    {name: 'repo',
+    message: 'Respository name: ',
+    type: 'input'},
+
+    {name: 'title',
     message: 'Project title: ',
     type: 'input'},
 
@@ -18,10 +22,10 @@ inquirer.prompt([{
     message: 'Usage instructions: ',
     type: 'input'},
 
-    {name: 'licence',
-    message: 'Select licence type: ',
+    {name: 'license',
+    message: 'Select license type: ',
     type: 'list',
-    choices: ['MIT', 'APACHE', 'GNU']},
+    choices: ['MIT', 'Mozilla Public License 2.0', 'Apache License 2.0']},
 
     {name: 'contributing',
     message: 'Instructions for contributing: ',
@@ -59,15 +63,13 @@ ${(JSON.stringify(answers.installation).replace(/"/g, ""))}
 ## Usage
 ${(JSON.stringify(answers.usage).replace(/"/g, ""))}
 ## Licence
-[![${(JSON.stringify(answers.licence).replace(/"/g, ""))} License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![${(JSON.stringify(answers.license).replace(/"/g, ""))} License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/${(JSON.stringify(answers.license).replace(/"/g, ""))}/${(JSON.stringify(answers.repo).replace(/"/g, ""))}/blob/main/LICENSE)
 ## Contributing
-[![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg?style=flat)]()  
 ${(JSON.stringify(answers.contributing).replace(/"/g, ""))}
 ## Tests
 ${(JSON.stringify(answers.tests).replace(/"/g, ""))}
 ## Questions
 ${(JSON.stringify(answers.github).replace(/"/g, ""))}
-[![GitHub followers](https://img.shields.io/github/followers/tterb.svg?style=social&label=Follow)](https://github.com/${(JSON.stringify(answers.github).replace(/"/g, ""))}/MyBadges)
 ${(JSON.stringify(answers.email).replace(/"/g, ""))}
     `, 'utf-8', function(){
         console.log('readme file created successfully!');
