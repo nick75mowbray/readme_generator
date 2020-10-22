@@ -61,11 +61,14 @@ ${(JSON.stringify(answers.usage).replace(/"/g, ""))}
 ## Licence
 [![${(JSON.stringify(answers.licence).replace(/"/g, ""))} License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 ## Contributing
+[![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg?style=flat)]()  
 ${(JSON.stringify(answers.contributing).replace(/"/g, ""))}
 ## Tests
 ${(JSON.stringify(answers.tests).replace(/"/g, ""))}
 ## Questions
 ${(JSON.stringify(answers.github).replace(/"/g, ""))}
+[![GitHub followers](https://img.shields.io/github/followers/tterb.svg?style=social&label=Follow)](https://github.com/${(JSON.stringify(answers.github).replace(/"/g, ""))}/MyBadges)
+${(JSON.stringify(answers.email).replace(/"/g, ""))}
     `, 'utf-8', function(){
         console.log('readme file created successfully!');
     })
