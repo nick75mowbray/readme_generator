@@ -63,13 +63,13 @@ ${(JSON.stringify(answers.installation).replace(/"/g, ""))}
 ## Usage
 ${(JSON.stringify(answers.usage).replace(/"/g, ""))}
 ## Licence
-[![${(JSON.stringify(answers.license).replace(/"/g, ""))} License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/${(JSON.stringify(answers.github).replace(/"/g, ""))}/${(JSON.stringify(answers.repo).replace(/"/g, ""))}/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-${(JSON.stringify(answers.license).replace(/"/g, ""))}-green)](https://github.com/${(JSON.stringify(answers.github).replace(/"/g, ""))}/${(JSON.stringify(answers.repo).replace(/"/g, ""))}/blob/main/LICENSE)
 ## Contributing
 ${(JSON.stringify(answers.contributing).replace(/"/g, ""))}
 ## Tests
 ${(JSON.stringify(answers.tests).replace(/"/g, ""))}
 ## Questions
-[Github ${(JSON.stringify(answers.github).replace(/"/g, ""))}](https://${(JSON.stringify(answers.github).replace(/"/g, ""))}
+[Github ${(JSON.stringify(answers.github).replace(/"/g, ""))}](https://${(JSON.stringify(answers.github).replace(/"/g, ""))})
 [Email ${(JSON.stringify(answers.email).replace(/"/g, ""))}](mailto: ${(JSON.stringify(answers.email).replace(/"/g, ""))})
     `, 'utf-8', function(){
         console.log('readme file created successfully!');
