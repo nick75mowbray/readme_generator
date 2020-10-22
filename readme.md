@@ -1,6 +1,6 @@
-# readme generator
+# readme title
 ## Description
-desgatioangf
+descriptiong
 ## Table of Contents
 * [Description](#Description)
 * [Installation](#Installation)
@@ -10,16 +10,16 @@ desgatioangf
 * [Tests](#Tests)
 * [Questions](#Questions)
 ## Installation
-insdgiaosnga
+installlation
 ## Usage
-usdfanga
+usage
 ## Licence
-[![License](https://img.shields.io/badge/license-Mozilla Public License 2.0-green)](https://github.com/nick75mowbray/readme_generator/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/nick75mowbray/readme_generator/blob/main/LICENSE)
 ## Contributing
-contributings
+instructions
 ## Tests
-testaing
+tsting
 ## Questions
-[Github nick75mowbray](https://nick75mowbray)
+[Github: nick75mowbray](https://nick75mowbray)
 [Email nick75mowbray@gmail.com](mailto: nick75mowbray@gmail.com)
     

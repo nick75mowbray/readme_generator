@@ -45,6 +45,8 @@ inquirer.prompt([
 ])
 .then(answers => {
         console.log('Answers:', answers);
+        // remove spaces from licence name
+        // trim email, username, repo name
         fs.writeFile('readme.md', 
 
 `# ${(JSON.stringify(answers.title).replace(/"/g, ""))}
@@ -69,7 +71,7 @@ ${(JSON.stringify(answers.contributing).replace(/"/g, ""))}
 ## Tests
 ${(JSON.stringify(answers.tests).replace(/"/g, ""))}
 ## Questions
-[Github ${(JSON.stringify(answers.github).replace(/"/g, ""))}](https://${(JSON.stringify(answers.github).replace(/"/g, ""))})
+[Github: ${(JSON.stringify(answers.github).replace(/"/g, ""))}](https://${(JSON.stringify(answers.github).replace(/"/g, ""))})
 [Email ${(JSON.stringify(answers.email).replace(/"/g, ""))}](mailto: ${(JSON.stringify(answers.email).replace(/"/g, ""))})
     `, 'utf-8', function(){
         console.log('readme file created successfully!');
