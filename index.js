@@ -21,7 +21,7 @@ inquirer.prompt([{
     {name: 'licence',
     message: 'Select licence type: ',
     type: 'list',
-    choices: ['alligator', 'crocodile']},
+    choices: ['MIT', 'APACHE', 'GNU']},
 
     {name: 'contributing',
     message: 'Instructions for contributing: ',
@@ -59,7 +59,7 @@ ${(JSON.stringify(answers.installation).replace(/"/g, ""))}
 ## Usage
 ${(JSON.stringify(answers.usage).replace(/"/g, ""))}
 ## Licence
-${(JSON.stringify(answers.licence).replace(/"/g, ""))}
+[![${(JSON.stringify(answers.licence).replace(/"/g, ""))} License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 ## Contributing
 ${(JSON.stringify(answers.contributing).replace(/"/g, ""))}
 ## Tests

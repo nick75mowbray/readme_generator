@@ -1,6 +1,6 @@
-# test
+# test titel
 ## Description
-test
+test descriptn
 ## Table of Contents
 * [Description](#Description)
 * [Installation](#Installation)
@@ -10,15 +10,15 @@ test
 * [Tests](#Tests)
 * [Questions](#Questions)
 ## Installation
-test
+test installation
 ## Usage
-test
+ttest usage
 ## Licence
-alligator
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 ## Contributing
-test
+test contributing
 ## Tests
-test
+tes testsing
 ## Questions
-test
+tse gituuser
     
