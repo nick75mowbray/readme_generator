@@ -23,7 +23,7 @@ inquirer.prompt([{
     type: 'list',
     choices: ['alligator', 'crocodile']},
 
-    {name: 'constributing',
+    {name: 'contributing',
     message: 'Instructions for contributing: ',
     type: 'input'},
 
@@ -41,7 +41,7 @@ inquirer.prompt([{
 ])
 .then(answers => {
         console.log('Answers:', answers);
-        fs.writeFile('readme.md', ` #${(JSON.stringify(answers.title).replace(/"/g, ""))}
+        fs.writeFile('readme.md', ` # ${(JSON.stringify(answers.title).replace(/"/g, ""))}
     ##Description
     ${(JSON.stringify(answers.description).replace(/"/g, ""))}
     ##Table of Contents
