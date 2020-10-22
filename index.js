@@ -43,10 +43,10 @@ inquirer.prompt([{
         console.log('Answers:', answers);
         fs.writeFile('readme.md', 
 
-`#${(JSON.stringify(answers.title).replace(/"/g, ""))}\
-##Description\
-${(JSON.stringify(answers.description).replace(/"/g, ""))}\
-##Table of Contents\
+`# ${(JSON.stringify(answers.title).replace(/"/g, ""))}
+## Description
+${(JSON.stringify(answers.description).replace(/"/g, ""))}
+## Table of Contents
 * [Description](#Description)
 * [Installation](#Installation)
 * [Usage](#Usage)
@@ -54,17 +54,17 @@ ${(JSON.stringify(answers.description).replace(/"/g, ""))}\
 * [Contributing](#Contributing)
 * [Tests](#Tests)
 * [Questions](#Questions)
-##Installation\
-${(JSON.stringify(answers.installation).replace(/"/g, ""))}\
-##Usage\
-${(JSON.stringify(answers.usage).replace(/"/g, ""))}\
-##Licence\
-${(JSON.stringify(answers.licence).replace(/"/g, ""))}\
-##Contributing\
-${(JSON.stringify(answers.contributing).replace(/"/g, ""))}\
-##Tests\
-${(JSON.stringify(answers.tests).replace(/"/g, ""))}\
-##Questions
+## Installation
+${(JSON.stringify(answers.installation).replace(/"/g, ""))}
+## Usage
+${(JSON.stringify(answers.usage).replace(/"/g, ""))}
+## Licence
+${(JSON.stringify(answers.licence).replace(/"/g, ""))}
+## Contributing
+${(JSON.stringify(answers.contributing).replace(/"/g, ""))}
+## Tests
+${(JSON.stringify(answers.tests).replace(/"/g, ""))}
+## Questions
 ${(JSON.stringify(answers.github).replace(/"/g, ""))}
     `, 'utf-8', function(){
         console.log('readme file created successfully!');
