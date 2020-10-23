@@ -1,6 +1,6 @@
 # adsf
 ## Description
-asdf
+dasf
 ## Table of Contents
 * [Description](#Description)
 * [Installation](#Installation)
@@ -11,17 +11,17 @@ asdf
 * [Questions](#Questions)
 ## Installation
 ``` 
-adsf 
+npm init 
 ```
 ## Usage
 adsf
 ## Licence
-[![License](https://img.shields.io/badge/license-MPL%202.0-green)](https://github.com/adsf/adsf/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MPL%202.0-green)](https://github.com/adsf/adfs/blob/main/LICENSE)
 ## Contributing
-adsf
+adf
 ## Tests
 adsf
 ## Questions
 [Github: adsf](https://github.adsf)   
-[Email: nick75mowbray@gmail.com](mailto:nick75mowbray@gmail.com)
+[Email: adsf](mailto:adsf)
     

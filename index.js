@@ -54,14 +54,6 @@ inquirer.prompt([
         }
         // variable to store ``` codeblock
         const codeBlock = "```";
-        let replaceFormatting = /'\r\n'/gi;
-        // remove \r\n from text returning from editor for installation section
-        console.log(answers.installation);
-        let installationText = JSON.stringify(answers.installation);
-        console.log(installationText);
-        installationText.replace(/(\r\n|\n|\r)/gm, "");
-        console.log(installationText);
-        // installationText.replace('npm', '');
         fs.writeFile('readme.md', 
 
 `# ${(JSON.stringify(answers.title).replace(/"/g, ""))}
