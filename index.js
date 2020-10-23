@@ -2,10 +2,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 inquirer.prompt([
-    {name: 'repo',
-    message: 'Respository name: ',
-    type: 'input'},
-
     {name: 'title',
     message: 'Project title: ',
     type: 'input'},
@@ -16,7 +12,7 @@ inquirer.prompt([
 
     {name: 'installation',
     message: 'Installation instructions: ',
-    type: 'input'},
+    type: 'editor'},
 
     {name: 'usage',
     message: 'Usage instructions: ',
@@ -25,7 +21,7 @@ inquirer.prompt([
     {name: 'license',
     message: 'Select license type: ',
     type: 'list',
-    choices: ['MIT', 'Mozilla Public License 2.0', 'Apache License 2.0']},
+    choices: ['MIT', 'Mozilla-Public-License', 'Apache']},
 
     {name: 'contributing',
     message: 'Instructions for contributing: ',
@@ -37,6 +33,10 @@ inquirer.prompt([
 
     {name: 'github',
     message: 'Github username: ',
+    type: 'input'},    
+    
+    {name: 'repo',
+    message: 'Respository name: ',
     type: 'input'},
 
     {name: 'email',
@@ -45,8 +45,23 @@ inquirer.prompt([
 ])
 .then(answers => {
         console.log('Answers:', answers);
-        // remove spaces from licence name
-        // trim email, username, repo name
+        // if user choses mozilla or apache need to get correct formatting for badge
+        if (answers.license=="Apache 2.0"){
+            answers.license = 'Apache%202.0';
+        }
+        if (answers.license == 'Mozilla-Public-License'){
+            answers.license = 'MPL%202.0';
+        }
+        // variable to store ``` codeblock
+        const codeBlock = "```";
+        let replaceFormatting = /'\r\n'/gi;
+        // remove \r\n from text returning from editor for installation section
+        console.log(answers.installation);
+        let installationText = JSON.stringify(answers.installation);
+        console.log(installationText);
+        installationText.replace(/(\r\n|\n|\r)/gm, "");
+        console.log(installationText);
+        // installationText.replace('npm', '');
         fs.writeFile('readme.md', 
 
 `# ${(JSON.stringify(answers.title).replace(/"/g, ""))}
@@ -61,7 +76,9 @@ ${(JSON.stringify(answers.description).replace(/"/g, ""))}
 * [Tests](#Tests)
 * [Questions](#Questions)
 ## Installation
-${(JSON.stringify(answers.installation).replace(/"/g, ""))}
+${codeBlock} 
+${answers.installation} 
+${codeBlock}
 ## Usage
 ${(JSON.stringify(answers.usage).replace(/"/g, ""))}
 ## Licence
@@ -71,12 +88,12 @@ ${(JSON.stringify(answers.contributing).replace(/"/g, ""))}
 ## Tests
 ${(JSON.stringify(answers.tests).replace(/"/g, ""))}
 ## Questions
-[Github: ${(JSON.stringify(answers.github).replace(/"/g, ""))}](https://${(JSON.stringify(answers.github).replace(/"/g, ""))})
-[Email ${(JSON.stringify(answers.email).replace(/"/g, ""))}](mailto: ${(JSON.stringify(answers.email).replace(/"/g, ""))})
+[Github: ${(JSON.stringify(answers.github).replace(/"/g, "").trim())}](https://github.${(JSON.stringify(answers.github).replace(/"/g, "")).trim()})   
+[Email: ${(JSON.stringify(answers.email).replace(/"/g, "")).trim()}](mailto:${(JSON.stringify(answers.email).replace(/"/g, "")).trim()})
     `, 'utf-8', function(){
         console.log('readme file created successfully!');
     })
     })
 .catch(function(err){
-console.log('there was an error'+ err);
+console.log('there was an error '+ err);
 });
