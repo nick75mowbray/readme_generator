@@ -80,7 +80,7 @@ ${(JSON.stringify(answers.contributing).replace(/"/g, ""))}
 ## Tests
 ${(JSON.stringify(answers.tests).replace(/"/g, ""))}
 ## Questions
-[Github: ${(JSON.stringify(answers.github).replace(/"/g, "").trim())}](https://github.${(JSON.stringify(answers.github).replace(/"/g, "")).trim()})   
+[Github: ${(JSON.stringify(answers.github).replace(/"/g, "").trim())}](https://github.com/${(JSON.stringify(answers.github).replace(/"/g, "")).trim()})   
 [Email: ${(JSON.stringify(answers.email).replace(/"/g, "")).trim()}](mailto:${(JSON.stringify(answers.email).replace(/"/g, "")).trim()})
     `, 'utf-8', function(){
         console.log('readme file created successfully!');
